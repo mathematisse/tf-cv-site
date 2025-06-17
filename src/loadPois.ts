@@ -7,6 +7,7 @@ export interface Poi {
   lng: number;
   description?: string;
   image?: string;
+  details?: string;
 }
 
 export function loadPois(): Poi[] {

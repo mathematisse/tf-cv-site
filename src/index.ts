@@ -4,12 +4,15 @@ import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { loadPois, Poi } from './loadPois';
+import { initPoiCard, showPoiCard } from './poiCard';
 
 export function main() {
   const map = L.map('map', {
     center: [0, 0],
     zoom: 2,
   });
+
+  initPoiCard();
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors',
@@ -20,11 +23,7 @@ export function main() {
 
   pois.forEach((poi) => {
     const marker = L.marker([poi.lat, poi.lng]);
-    marker.bindPopup(
-      `<h3>${poi.name}</h3>` +
-        (poi.description ? `<p>${poi.description}</p>` : '') +
-        (poi.image ? `<img src="${poi.image}" alt="${poi.name}">` : '')
-    );
+    marker.on('click', () => showPoiCard(poi));
     clusterGroup.addLayer(marker);
   });
 
