@@ -5,6 +5,9 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: '.',
+  // Set the base path so that assets resolve correctly when the site
+  // is served from the "tf-cv-site" subpath on GitHub Pages.
+  base: '/tf-cv-site/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
