@@ -27,8 +27,3 @@ npm run deploy
 ```
 
 This builds the site and publishes the contents of `dist` to the `gh-pages` branch using the `gh-pages` package.
-Make sure the `base` option in `vite.config.ts` matches the repository
-name (e.g. `/tf-cv-site/`) so that asset URLs are resolved correctly on
-GitHub Pages.
-The deploy script sets a default commit user for publishing so no
-additional Git configuration is required when run in GitHub Actions.
