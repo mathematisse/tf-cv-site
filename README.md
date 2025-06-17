@@ -27,3 +27,7 @@ npm run deploy
 ```
 
 This builds the site and publishes the contents of `dist` to the `gh-pages` branch using the `gh-pages` package.
+
+## Customization
+
+Map appearance can be tweaked through `src/style.css`. For example, the `--map-tint` CSS variable controls a filter applied to each tile. Marker icon images are located in `src/assets`. Replace these files to customize the pins shown on the map.

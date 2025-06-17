@@ -5,9 +5,10 @@ import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { loadPois, Poi } from './loadPois';
 import { initPoiCard, showPoiCard } from './poiCard';
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+import markerIcon from './assets/marker-icon.png';
+import markerIcon2x from './assets/marker-icon-2x.png';
+import markerShadow from './assets/marker-shadow.png';
+import './style.css';
 
 export function main() {
   L.Icon.Default.mergeOptions({

@@ -1,0 +1,8 @@
+#map {
+  height: 100vh;
+}
+
+/* Apply a CSS filter to tile images so the map style can be easily adjusted. */
+.leaflet-tile {
+  filter: var(--map-tint, none);
+}
