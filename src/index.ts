@@ -11,7 +11,8 @@ import markerShadow from './assets/marker-shadow.png';
 import './style.css';
 
 export function main() {
-  L.Icon.Default.mergeOptions({
+  var Icon = L.icon({
+    ...L.Icon.Default.prototype.options,
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
     shadowUrl: markerShadow,
@@ -31,7 +32,7 @@ export function main() {
   const pois: Poi[] = loadPois();
 
   pois.forEach((poi) => {
-    const marker = L.marker([poi.lat, poi.lng]);
+    const marker = L.marker([poi.lat, poi.lng], {icon: Icon});
     marker.on('click', () => showPoiCard(poi));
     clusterGroup.addLayer(marker);
   });
