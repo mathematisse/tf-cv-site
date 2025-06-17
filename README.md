@@ -31,3 +31,6 @@ This builds the site and publishes the contents of `dist` to the `gh-pages` bran
 ## Customization
 
 Map appearance can be tweaked through `src/style.css`. For example, the `--map-tint` CSS variable controls a filter applied to each tile. Marker icon images are located in `src/assets`. Replace these files to customize the pins shown on the map.
+When overriding these icons, make sure `src/index.ts` sets `imagePath: ''` when
+calling `L.Icon.Default.mergeOptions` so Leaflet loads the files from `src/assets`
+instead of `node_modules`.
