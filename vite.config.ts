@@ -5,7 +5,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: '.',
-  base: '/tf-cv-site/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
