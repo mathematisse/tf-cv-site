@@ -2,11 +2,22 @@
   lat: 48.8584
   lng: 2.2945
   description: "Iconic Parisian landmark"
+  details: |
+    ![Eiffel Tower](https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg)
+    The Eiffel Tower is an iron lattice tower in Paris, France.
+
 - name: Statue of Liberty
   lat: 40.6892
   lng: -74.0445
   description: "Famous statue in New York City"
+  details: |
+    ![Statue of Liberty](https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg)
+    The Statue of Liberty was a gift from France to the United States.
+
 - name: Great Wall of China
   lat: 40.4319
   lng: 116.5704
   description: "Historic fortification"
+  details: |
+    ![Great Wall](https://upload.wikimedia.org/wikipedia/commons/1/10/20090529_Great_Wall_8185.jpg)
+    The Great Wall stretches thousands of miles across China.
