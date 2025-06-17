@@ -20,6 +20,14 @@ npm run build
 
 The build output is generated in the `dist` directory.
 
+## Test
+
+```bash
+npm test
+```
+
+Runs the Vitest test suite.
+
 ## Deploy to GitHub Pages
 
 ```bash
@@ -30,7 +38,9 @@ This builds the site and publishes the contents of `dist` to the `gh-pages` bran
 
 ## Customization
 
-Map appearance can be tweaked through `src/style.css`. For example, the `--map-tint` CSS variable controls a filter applied to each tile. Marker icon images are located in `src/assets`. Replace these files to customize the pins shown on the map.
-When overriding these icons, make sure `src/index.ts` sets `imagePath: ''` when
-calling `L.Icon.Default.mergeOptions` so Leaflet loads the files from `src/assets`
-instead of `node_modules`.
+Map appearance and typography can be tweaked through `src/style.css` which
+defines a set of CSS variables. The `--map-tint` variable controls a filter
+applied to each tile and defaults to a pastel palette. Variables like
+`--font-family`, `--font-size`, `--bg-color` and `--text-color` let you adjust
+the site's global look and feel. Marker icon images are located in
+`src/assets`; replace these files to customize the pins shown on the map.
