@@ -1,8 +1,30 @@
+/*
+  Global style variables. Override these in a custom stylesheet or inline style
+  block to tweak fonts and colors across the site.
+*/
+:root {
+  --font-family: system-ui, sans-serif;
+  --font-size: 16px;
+  --bg-color: #f8f8f8;
+  --text-color: #333;
+
+  /* Pastel filter applied to map tiles by default */
+  --map-tint: brightness(1.15) saturate(0.75);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 #map {
   height: 100vh;
 }
 
 /* Apply a CSS filter to tile images so the map style can be easily adjusted. */
 .leaflet-tile {
-  filter: var(--map-tint, none);
+  filter: var(--map-tint);
 }

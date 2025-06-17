@@ -38,4 +38,9 @@ This builds the site and publishes the contents of `dist` to the `gh-pages` bran
 
 ## Customization
 
-Map appearance can be tweaked through `src/style.css`. For example, the `--map-tint` CSS variable controls a filter applied to each tile. Marker icon images are located in `src/assets`. Replace these files to customize the pins shown on the map.
+Map appearance and typography can be tweaked through `src/style.css` which
+defines a set of CSS variables. The `--map-tint` variable controls a filter
+applied to each tile and defaults to a pastel palette. Variables like
+`--font-family`, `--font-size`, `--bg-color` and `--text-color` let you adjust
+the site's global look and feel. Marker icon images are located in
+`src/assets`; replace these files to customize the pins shown on the map.
