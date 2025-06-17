@@ -33,6 +33,8 @@ export function initPoiCard() {
     maxHeight: '80vh',
     overflowY: 'auto',
     padding: '1rem',
+    boxSizing: 'border-box',
+    wordBreak: 'break-word',
   } as CSSStyleDeclaration);
 
   const closeBtn = document.createElement('button');
@@ -50,13 +52,30 @@ export function showPoiCard(poi: Poi) {
     initPoiCard();
   }
   if (!overlay || !card) return;
+  let content = '';
+  if (poi.details) {
+    content = marked.parse(poi.details);
+  } else if (poi.description) {
+    content = `<p>${poi.description}</p>`;
+  }
+
   const html = `
     <h2>${poi.name}</h2>
-    ${poi.details ? marked.parse(poi.details) : ''}
+    ${content}
   `;
+
   card.innerHTML = '<button style="float:right">Close</button>' + html;
   const close = card.querySelector('button');
   close?.addEventListener('click', hidePoiCard);
+
+  card.querySelectorAll('img').forEach((img) => {
+    const el = img as HTMLImageElement;
+    el.style.maxWidth = '100%';
+    el.style.height = 'auto';
+    el.style.display = 'block';
+    el.style.margin = '0 auto';
+  });
+
   overlay.style.display = 'flex';
 }
 
