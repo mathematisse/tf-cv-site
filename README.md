@@ -2,6 +2,8 @@
 
 This project provides a simple TypeScript setup powered by [Vite](https://vitejs.dev/) for building a static website that can be published to GitHub Pages.
 
+A small Leaflet demo map is included. Points of interest are loaded from `src/pois.yaml` and displayed with marker clustering.
+
 ## Development
 
 ```bash
