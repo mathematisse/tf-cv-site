@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
-      - run: git config --global user.email "you@example.com"
-      - run: git config --global user.name "Your Name"
+      - run: git config --global user.email "lucien.pineau@epitech.eu"
+      - run: git config --global user.name "mathematisse"
       - run: npm run deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
