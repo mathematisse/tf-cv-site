@@ -15,11 +15,6 @@ export function main() {
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
     shadowUrl: markerShadow,
-    // Ensure Leaflet uses the exact URLs provided above instead of
-    // prefixing them with the default image path detected from
-    // leaflet.css. Setting `imagePath` to an empty string avoids
-    // requests for files under `node_modules/leaflet/dist/images`. 
-    imagePath: '',
   });
   const map = L.map('map', {
     center: [0, 0],
