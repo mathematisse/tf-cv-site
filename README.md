@@ -20,6 +20,14 @@ npm run build
 
 The build output is generated in the `dist` directory.
 
+## Test
+
+```bash
+npm test
+```
+
+Runs the Vitest test suite.
+
 ## Deploy to GitHub Pages
 
 ```bash
