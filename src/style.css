@@ -96,6 +96,14 @@ section {
   margin: 0 auto;
 }
 
+/* Image displayed at the top of the home page */
+.home-top-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
 #poi-card .close-btn {
   float: right;
 }
