@@ -1,5 +1,5 @@
-import * as yaml from 'js-yaml';
-import poiData from './pois.yaml?raw';
+// Load POI data on demand so assets aren't bundled
+// with the initial JavaScript payload.
 
 export interface Poi {
   name: string;
@@ -10,6 +10,14 @@ export interface Poi {
   details?: string;
 }
 
-export function loadPois(): Poi[] {
-  return yaml.load(poiData) as Poi[];
+/**
+ * Fetch and parse the POI YAML file asynchronously.
+ */
+export async function loadPois(): Promise<Poi[]> {
+  // Use dynamic import so the file can be inlined by the bundler and also
+  // fetched at runtime when needed.
+  const data = (await import('./pois.yaml?raw')).default as string;
+  let text = data;
+  const yaml = await import('js-yaml');
+  return yaml.load(text) as Poi[];
 }
