@@ -27,3 +27,5 @@ This repository contains a small TypeScript website powered by [Vite](https://vi
   imported by the component. Keep global rules in `src/style.css` minimal.
 - Reuse styles by importing shared CSS modules rather than scattering ad-hoc
   styles across files.
+- Use responsive CSS practices (flexbox, relative units and media queries) so
+  pages work well on both desktop and mobile.
