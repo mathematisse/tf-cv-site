@@ -35,6 +35,7 @@ export function initPoiCard() {
     padding: '1rem',
     boxSizing: 'border-box',
     wordBreak: 'break-word',
+    borderRadius: '8px',
   } as CSSStyleDeclaration);
 
   const closeBtn = document.createElement('button');

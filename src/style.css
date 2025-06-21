@@ -9,7 +9,8 @@
   --text-color: #333;
 
   /* Pastel filter applied to map tiles by default */
-  --map-tint: brightness(1.15) saturate(0.75);
+  --map-tint: brightness(.8) saturate(1) contrast(1.2) hue-rotate(-1deg) 
+    sepia(.1) grayscale(0.1);
 }
 
 body {
