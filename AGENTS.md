@@ -19,3 +19,11 @@ This repository contains a small TypeScript website powered by [Vite](https://vi
 - Keep pull requests small and clearly describe the motivation for the change.
 - Summarize the manual testing you performed (e.g., "site builds successfully").
 - Title format: `<area>: <short description>`.
+
+## Coding Style
+- Split functionality into small components under `src/` when possible. Avoid
+  combining unrelated logic in a single file.
+- Each component should own its styles in a matching `component-name.css` file
+  imported by the component. Keep global rules in `src/style.css` minimal.
+- Reuse styles by importing shared CSS modules rather than scattering ad-hoc
+  styles across files.
