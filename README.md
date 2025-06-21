@@ -4,6 +4,9 @@ This project provides a simple TypeScript setup powered by [Vite](https://vitejs
 
 A small Leaflet demo map is included. Points of interest are loaded from `src/pois.yaml` and displayed with marker clustering.
 
+The site is organised as three pages accessible from the navigation menu:
+`cv.html`, `map.html` and `portfolio.html`.
+
 ## Development
 
 ```bash
