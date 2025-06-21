@@ -21,11 +21,44 @@ body {
   color: var(--text-color);
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 #map {
-  height: 100vh;
+  height: calc(100vh - 3rem);
+  margin-top: 3rem;
 }
 
 /* Apply a CSS filter to tile images so the map style can be easily adjusted. */
 .leaflet-tile {
   filter: var(--map-tint);
+}
+
+section {
+  padding: 2rem;
 }
