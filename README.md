@@ -47,3 +47,10 @@ applied to each tile and defaults to a pastel palette. Variables like
 `--font-family`, `--font-size`, `--bg-color` and `--text-color` let you adjust
 the site's global look and feel. Marker icon images are located in
 `src/assets`; replace these files to customize the pins shown on the map.
+
+## Responsive Design
+
+`src/style.css` includes a mobile breakpoint to stack the navigation menu and
+adjust padding. When extending the site, favour relative units and flexbox so
+layouts adapt smoothly across screen sizes. Add media queries where necessary to
+maintain usability on narrow screens.

@@ -106,3 +106,20 @@ section {
   height: 80vh;
   border: none;
 }
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  nav {
+    position: static;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #map {
+    margin-top: 0;
+    height: 60vh;
+  }
+  section {
+    padding: 1rem;
+  }
+}
