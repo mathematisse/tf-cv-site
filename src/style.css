@@ -106,6 +106,14 @@ section {
   height: 80vh;
   border: none;
 }
+
+
+#pdf-canvas {
+  display: block;
+  width: 100vw;
+  height: auto;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   nav {
