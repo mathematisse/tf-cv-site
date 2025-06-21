@@ -1,22 +1,16 @@
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet.markercluster';
+import 'leaflet.markercluster/dist/MarkerCluster.css';
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { loadPois, Poi } from './loadPois';
 import { initPoiCard, showPoiCard } from './poiCard';
+import markerIcon from './assets/marker-icon.png';
+import markerIcon2x from './assets/marker-icon-2x.png';
+import markerShadow from './assets/marker-shadow.png';
 import './style.css';
 
 export async function main() {
-  // Dynamically import map libraries and assets so initial page load is light
-  const [{ default: L }, _mc] = await Promise.all([
-    import('leaflet'),
-    import('leaflet.markercluster'),
-  ]);
-  await Promise.all([
-    import('leaflet/dist/leaflet.css'),
-    import('leaflet.markercluster/dist/MarkerCluster.css'),
-    import('leaflet.markercluster/dist/MarkerCluster.Default.css'),
-  ]);
-
-  const markerIcon = (await import('./assets/marker-icon.png')).default;
-  const markerIcon2x = (await import('./assets/marker-icon-2x.png')).default;
-  const markerShadow = (await import('./assets/marker-shadow.png')).default;
 
   const Icon = L.icon({
     ...L.Icon.Default.prototype.options,
