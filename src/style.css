@@ -62,3 +62,40 @@ nav a:hover {
 section {
   padding: 2rem;
 }
+
+/* Styles for the point of interest card overlay */
+#poi-card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Styles for the card content */
+#poi-card {
+  background: white;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  word-break: break-word;
+  border-radius: 8px;
+}
+
+#poi-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#poi-card .close-btn {
+  float: right;
+}
