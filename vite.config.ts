@@ -10,6 +10,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        cv: 'cv.html',
+        map: 'map.html',
+        portfolio: 'portfolio.html',
+      },
+    },
   },
   test: {
     globals: true,
