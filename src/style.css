@@ -99,3 +99,10 @@ section {
 #poi-card .close-btn {
   float: right;
 }
+
+/* PDF embed styling */
+#cv-embed {
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
